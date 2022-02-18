@@ -112,13 +112,14 @@ def main(lst:list,value:int):
                 ints.append(int(ii[-max_len:],2))
             print(ints,"==> ",end="")
             if len(i) > 1:
-                print("|"+add_n_numbers(i,0,-max_len)[1:]+">")
+                ans_d=add_n_numbers(i,0,-max_len)[-len(lst):]
+                print("|"+ans_d+">")
             elif len(i)==1:
                 print("|"+i[0][0:-max_len]+">")
     
 
 if __name__=="__main__":
-    lst = [5,7,9,8,1]
+    lst = [5, 7, 9, 8, 1]
     value = 16
     print("Given list:",lst)
     main(lst,value)
